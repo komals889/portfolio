@@ -34,6 +34,7 @@ const projects = [
   {
     name: 'Sainaplay',
     period: '61 days',
+    url: 'https://sainaplay.com/',
     description:
       'High‑performance OTT application focused on delivering a smooth streaming experience across devices.',
     highlights: [
@@ -44,6 +45,7 @@ const projects = [
   {
     name: 'Streamnxt',
     period: '153 days',
+    url: '',
     description:
       'Smart TV OTT application with a focus on seamless navigation and program discovery.',
     highlights: [
@@ -54,6 +56,7 @@ const projects = [
   {
     name: 'Orimedia',
     period: '6 months',
+    url: 'https://www.ori.mn/',
     description:
       'Music streaming application with a rich, responsive UI and personalized interactions.',
     highlights: [
@@ -64,6 +67,7 @@ const projects = [
   {
     name: 'Ultraplay, Ultragaane & Ultrajhakaas',
     period: '3 months',
+    url: 'https://www.ultrajhakaas.com/',
     description:
       'Multilingual (Marathi & Hindi) OTT experience for regional web series and movies.',
     highlights: [
@@ -335,6 +339,19 @@ function App() {
                     </li>
                   ))}
                 </ul>
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center text-xs font-medium text-emerald-400 transition hover:text-emerald-300"
+                  >
+                    View project
+                    <span aria-hidden="true" className="ml-1">
+                      ↗
+                    </span>
+                  </a>
+                ) : null}
               </article>
             ))}
           </div>
